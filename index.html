@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HealthCare</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- header -->
+    <header class="w-full shadow md:shadow-none md:bg-white">
+      <div class="container mx-auto flex items-center justify-between p-5">
+        <!-- LEFT: Logo -->
+        <a class="flex items-center ml-[10px] md:ml-[20px]">
+          <!-- <img src="./navbar-logo.png" class="w-[150px] h-[50px]" /> -->
+          <img
+            src="./images/navbar-logo.png"
+            class="w-[130px] h-[40px] md:w-[150px] md:h-[50px]"
+            alt="Logo"
+          />
+        </a>
+
+        <!-- MOBILE TOGGLE BUTTON (Blue & Visible) -->
+        <input type="checkbox" id="menu-toggle" class="hidden peer" />
+
+        <label for="menu-toggle" class="md:hidden cursor-pointer z-50">
+          <i class="fa-solid fa-bars" style="color: #74c0fc"></i>
+        </label>
+
+        <!-- MENU -->
+        <nav
+          class="absolute md:static top-[70px] left-0 w-full md:w-auto bg-white md:bg-transparent shadow md:shadow-none flex-col md:flex-row md:flex hidden peer-checked:flex items-center gap-2 md:gap-[15px] py-5 md:py-0 text-[16px] z-40"
+        >
+          <a
+            class="text-[#0095DE] hover:text-black font-medium px-4 py-2 rounded-md transition-colors duration-200"
+          >
+            Home
+          </a>
+
+          <a
+            class="text-black hover:text-[#0095DE] font-medium px-4 py-2 rounded-md transition-colors duration-200"
+            >Services</a
+          >
+          <a
+            class="text-black hover:text-[#0095DE] font-medium px-4 py-2 rounded-md transition-colors duration-200"
+            >Find Doctors</a
+          >
+          <a
+            class="text-black hover:text-[#0095DE] font-medium px-4 py-2 rounded-md transition-colors duration-200"
+            >About us</a
+          >
+          <a
+            class="text-black hover:text-[#0095DE] font-medium px-4 py-2 rounded-md transition-colors duration-200"
+            >Block</a
+          >
+          <a
+            class="text-black hover:text-[#0095DE] font-medium px-4 py-2 rounded-md transition-colors duration-200"
+            >Contact us</a
+          >
+
+          <!-- MOBILE JOIN BUTTON -->
+          <button
+            class="md:hidden inline-flex items-center bg-gradient-to-r from-[#A7E2FF] to-[#0095DE] hover:from-[#8ddaff] hover:to-[#0078b3] text-white py-2 px-8 rounded-lg"
+          >
+            Join us
+          </button>
+        </nav>
+
+        <!-- DESKTOP BUTTON -->
+        <button
+          class="hidden md:inline-flex items-center bg-gradient-to-r from-[#A7E2FF] to-[#0095DE] hover:from-[#8ddaff] hover:to-[#0078b3] text-white py-2 px-8 rounded-lg mr-[30px]"
+        >
+          Join us
+        </button>
+      </div>
+    </header>
+
+    <!-- hero -->
+
+    <section class="text-gray-600 body-font lg:ml-[50px] sm:ml-[0px]">
+      <div
+        class="container mx-auto flex flex-col md:flex-row items-center px-3 py-12 md:py-24 gap-2 md:gap-[60px]"
+      >
+        <div
+          class="lg:w-[1/2] md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center"
+        >
+          <h1 class="text-[30px] md:text-[48px] font-bold mb-4 text-gray-900">
+            Your
+            <span
+              class="bg-gradient-to-r from-[#A7E2FF] to-[#0095DE] bg-clip-text text-transparent"
+            >
+              trusted partner
+            </span>
+
+            <br class="hidden lg:inline-block" />
+            in digital healthcare.
+          </h1>
+          <p class="mb-8 leading-relaxed">
+            Empowering Your Health at Every Step. Experience personalized
+            medical care from the comfort of your home. Connect with certified
+            doctors, or manage prescriptions, and schedule appointments with
+            ease. Ready to take control of your health? Get Started or Book an
+            Appointment today.
+          </p>
+          <div class="flex justify-center">
+            <button
+              class="inline-flex items-center bold mr-[30px] bg-gradient-to-r from-[#A7E2FF] to-[#0095DE] hover:from-[#8ddaff] hover:to-[#0078b3] text-white py-3 px-[35px] rounded-lg focus:outline-none mt-4 md:mt-0 transform transition-all duration-1000 ease-out hover:scale-105 hover:-translate-y-2"
+            >
+              Book an Appointment
+              <i class="fa-solid fa-greater-than ml-[10px] text-[10px]"></i>
+            </button>
+          </div>
+
+          <p class="text-[12px] mt-5 md:mt-[25px]">
+            Trusted by millions across the globe:
+          </p>
+          <div class="mt-[20px]">
+            <img class="w-[280px] h-[35px]" src="./images/social-logo.png" />
+          </div>
+        </div>
+
+        <div
+          class="w-full md:w-1/2 lg:w-[450px] flex justify-center md:justify-start"
+        >
+          <img
+            class="w-full mb-[80px] sm:w-[300px] md:w-[450px] h-auto md:h-[420px] object-cover object-center rounded"
+            alt="hero"
+            src="./images/hero-img.png"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 easy step -->
+    <section
+      class="w-full md:w-[1200px] h-auto py-8 border border-[#95DDFF] rounded-2xl ml-0 md:ml-[70px] px-4 md:px-0"
+    >
+      <div class="ml-0 md:ml-[30px]">
+        <p class="text-[22px] md:text-[36px] font-bold text-[#0069AB]">
+          Easily book an appointment in 3 simple steps.
+        </p>
+
+        <div
+          class="flex flex-col md:flex-row mt-[20px] gap-[20px] md:gap-[40px]"
+        >
+          <!-- email -->
+          <div class="flex flex-col gap-2 w-full md:w-auto">
+            <p class="flex items-center gap-2">
+              <img src="./images/email-icon.png" class="w-5 h-5" />
+              Email Address
+            </p>
+
+            <input
+              type="email"
+              placeholder="Enter your email Address"
+              class="w-full md:w-auto border border-gray-300 rounded-lg px-4 md:px-12 py-2 placeholder-gray-200 focus:outline-none focus:border-[#0095DE] transform transition-all duration-700 hover:scale-105 hover:-translate-y-2"
+            />
+          </div>
+
+          <!-- phone -->
+          <div class="flex flex-col gap-2 w-full md:w-auto">
+            <p class="flex items-center gap-2">
+              <img src="./images/phone-icon.png" class="w-5 h-5" />
+              Contact Number
+            </p>
+
+            <input
+              type="text"
+              placeholder="Enter your Contact Number"
+              class="w-full md:w-auto border border-gray-300 rounded-lg px-4 md:px-12 py-2 placeholder-gray-200 focus:outline-none focus:border-[#0095DE] transform transition-all duration-700 hover:scale-105 hover:-translate-y-2"
+            />
+          </div>
+
+          <!-- date -->
+          <div class="flex flex-col gap-2 w-full md:w-auto">
+            <p class="flex items-center gap-2">
+              <img src="./images/date-icon.png" class="w-5 h-5" />
+              Date of Appoinment
+            </p>
+
+            <input
+              type="text"
+              placeholder="Select Date of Appointment"
+              class="w-full md:w-auto border border-gray-300 rounded-lg px-4 md:px-12 py-2 placeholder-gray-200 focus:outline-none focus:border-[#0095DE] transform transition-all duration-700 hover:scale-105 hover:-translate-y-2"
+            />
+          </div>
+
+          <!-- button -->
+          <div class="flex flex-col gap-2 w-full md:w-auto">
+            <p class="text-white">button</p>
+
+            <button
+              class="inline-flex items-center font-bold bg-[#00A4F4] text-white py-2 px-[30px] rounded-lg focus:outline-none mt-2 md:mt-0 w-full md:w-auto transform transition-all duration-300 ease-out hover:scale-105 hover:-translate-y-2 hover:bg-[#008cd1] hover:shadow-xl justify-between md:justify-start"
+            >
+              <!-- TEXT -->
+              <span>Book Now</span>
+
+              <!-- ICON -->
+              <span
+                class="bg-white border border-white rounded-2xl ml-[10px] md:ml-[15px]"
+              >
+                <i class="fa-solid fa-check text-[16px] text-blue-700"></i>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- top services -->
+
+    <section class="max-w-5xl mx-auto py-16 px-4 font-sans">
+      <!-- Heading -->
+      <h2 class="text-3xl md:text-5xl font-semibold text-center relative z-10">
+        Top
+        <span
+          class="bg-gradient-to-r from-[#A7E2FF] to-[#0095DE] bg-clip-text text-transparent"
+          >services</span
+        >
+        we offer
+      </h2>
+
+      <p
+        class="text-center max-w-2xl text-[15px] mx-auto mt-10 text-gray-500 relative z-10"
+      >
+        In today,s fast-paced world, your health deserves the utmost attention
+        and convenience. That,s why HealNet offers a suite of integrated
+        services designed to cater to your healthcare needs digitally.
+      </p>
+
+      <div class="grid md:grid-cols-12 gap-8 mt-14">
+        <!-- Online Consultations - BIG -->
+
+        <div
+          class="md:col-span-7 bg-white shadow-md rounded-2xl p-8 border-[#95DDFF] border hover:shadow-lg transition transform duration-1000 ease-out hover:scale-105 hover:-translate-y-2 relative"
+        >
+          <img
+            src="./images/waves.png"
+            class="w-[100px] h-[40px] absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2"
+          />
+
+          <img src="./images/toplogo1.png" class="w-10 h-10 mb-3" />
+          <h3 class="text-[27px] font-semibold mb-2 text-[#0069AB]">
+            Online Consultations
+          </h3>
+          <p class="text-[#6D6D6D] text-[17px] flex justify-center lg:pr-5">
+            Consult with top doctors across various specialties via video or
+            chat communication. It,s totally secure, private, and convenient.
+            Choose the best time for an in-person visit with our easy-to-use
+            scheduling system, or proceed with our online consultation.
+          </p>
+        </div>
+
+        <!-- Booking Appointments - -->
+        <div
+          class="md:col-span-5 bg-white shadow-md rounded-2xl p-8 border border-[#95DDFF] hover:shadow-lg transition transform duration-1000 ease-out hover:scale-105 hover:-translate-y-2"
+        >
+          <img src="./images/toplogo2.png" class="w-10 h-10 mb-3" />
+          <h3 class="text-[27px] font-semibold mb-2 text-[#0069AB]">
+            Booking Appointments
+          </h3>
+          <p class="text-[#6D6D6D] text-[18px] flex justify-center lg:pr-6">
+            Choose the best time for an in-person visit with our easy-to-use
+            scheduling system, or proceed with our online consultation features.
+          </p>
+        </div>
+      </div>
+
+      <!-- second row -->
+
+      <div class="grid md:grid-cols-3 gap-8 mt-10">
+        <!-- Prescriptions -->
+        <div
+          class="bg-white shadow-md rounded-2xl p-8 border-[#95DDFF] border hover:shadow-lg transition transform transition-all duration-1000 ease-out hover:scale-105 hover:-translate-y-2"
+        >
+          <img src="./images/toplogo3.png" class="w-10 h-10 mb-3" />
+          <h3 class="text-xl font-semibold mb-2 text-[#0069AB]">
+            Prescriptions
+          </h3>
+          <p class="text-[#6D6D6D] text-[17px] flex justify-center lg:pr-0">
+            Receive and renew prescriptions digitally after your consultation
+            with our specialists .
+          </p>
+        </div>
+
+        <!-- Medical Notes -->
+
+        <div
+          class="bg-white shadow-md rounded-2xl p-8 border-[#95DDFF] border hover:shadow-lg transition transform transition-all duration-1000 ease-out hover:scale-105 hover:-translate-y-2"
+        >
+          <img src="./images/toplogo4.png" class="w-10 h-10 mb-3" />
+          <h3 class="text-xl font-semibold mb-2 text-[#0069AB]">
+            Medical Notes
+          </h3>
+          <p class="text-[#6D6D6D] text-[17px] flex justify-center lg:pr-0">
+            Obtain necessary medical notes for work or school with only a few
+            clicks of hassle.
+          </p>
+        </div>
+
+        <!-- Medicine Refills -->
+
+        <div
+          class="bg-white shadow-md rounded-2xl p-8 border-[#95DDFF] border hover:shadow-lg transition transform transition-all duration-1000 ease-out hover:scale-105 hover:-translate-y-2 relative"
+        >
+          <img src="./images/toplogo5.png" class="w-10 h-10 mb-3" />
+
+          <h3 class="text-xl font-semibold mb-2 text-[#0069AB]">
+            Medicine Refills
+          </h3>
+
+          <p class="text-[#6D6D6D] text-[18px] flex justify-center lg:pr-0">
+            Skip the pharmacy queues and save time + energy by ordering medicine
+            refills online.
+          </p>
+
+          <!-- Wave image  -->
+          <img
+            src="./images/waves.png"
+            class="w-[100px] h-[40px] absolute bottom-0 right-0 translate-x-1/2 translate-y-1/2"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Healnet story -->
+
+    <section
+      class="w-full md:w-[1200px] h-auto p-10 border mt-8 border-[#95DDFF] rounded-2xl ml-0 md:ml-[70px]"
+    >
+      <h2
+        class="text-[20px] md:text-4xl font-semibold text-center relative z-10"
+      >
+        <span
+          class="bg-gradient-to-r from-[#A7E2FF] to-[#0095DE] bg-clip-text text-transparent"
+          >HealNet’s Story:</span
+        >
+        Get to know us
+      </h2>
+
+      <!-- Main Wrapper -->
+      <div
+        class="flex flex-col md:flex-row items-center md:items-start gap-10 md:gap-18 pt-12 px-0 md:px-4"
+      >
+        <!-- Image -->
+        <div class="flex-shrink-0">
+          <img
+            class="w-full md:w-[450px] h-auto md:h-[360px] object-cover rounded-2xl"
+            src="./images/healnet-story1.png"
+          />
+        </div>
+
+        <!-- Content -->
+        <div class="w-full md:w-[560px]">
+          <p class="text-[16px] md:text-[18px] text-[#6D6D6D] leading-relaxed">
+            HealNet is more than just an online medical service; it’s a movement
+            towards accessible, efficient, and compassionate healthcare for all.
+            Founded by a team of visionary doctors, healthcare professionals,
+            and technology experts, we are driven by the mission to deliver
+            exceptional medical care directly to you, no matter where you are.
+            Our platform is built on the pillars of trust, innovation, and
+            patient-centricity, ensuring that every interaction is personalized
+            and every treatment plan is tailored to your unique needs. With a
+            network of licensed practitioners from diverse medical fields, we
+            guarantee comprehensive care that’s just a click away.
+          </p>
+
+          <button
+            class="inline-flex items-center font-bold text-[18px] bg-[#00A4F4] text-white py-3 px-[50px] rounded-lg focus:outline-none mt-4 md:mt-4 w-full md:w-auto transform transition-all duration-300 ease-out hover:scale-105 hover:-translate-y-2 hover:bg-[#008cd1] hover:shadow-xl justify-center md:justify-start"
+          >
+            Learn more about us
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- platform -->
+
+    <section class="max-w-5xl mx-auto py-16 px-4 font-sans mt-6">
+      <h2 class="text-3xl md:text-5xl font-semibold text-center relative z-10">
+        How
+        <span
+          class="bg-gradient-to-r from-[#A7E2FF] to-[#0095DE] bg-clip-text text-transparent"
+        >
+          our platform
+        </span>
+        work
+      </h2>
+
+      <p
+        class="text-center max-w-2xl text-[15px] mx-auto mt-10 text-gray-500 relative z-10"
+      >
+        Navigating your healthcare journey with HealNet is seamless. Just follow
+        these steps mentioned below to proceed with your selected services. You
+        can also see our FAQ section for more guidance:
+      </p>
+
+      <!-- image section -->
+      <div
+        class="flex flex-col md:flex-row justify-center items-center md:items-start mt-16 gap-14 md:gap-26"
+      >
+        <!-- First Image -->
+        <div>
+          <img
+            class="w-[460px] md:w-[380px] h-auto md:h-[400px] object-contain"
+            src="./images/platformImage1.png"
+          />
+        </div>
+
+        <!-- Second Image -->
+        <div>
+          <img
+            class="w-full md:w-auto h-auto"
+            src="./images/platformImage2.png"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- patient testimonals -->
+
+    <section class="mt-10">
+      <h2
+        class="text-[24px] md:text-4xl font-semibold text-center bg-gradient-to-r from-[#A7E2FF] to-[#0095DE] bg-clip-text text-transparent w-fit mx-auto"
+      >
+        Patient Testimonials:
+      </h2>
+
+      <h1
+        class="text-[20px] md:text-4xl font-semibold text-center text-black w-fit mx-auto mt-4"
+      >
+        Hear from Those We’ve Cared For
+      </h1>
+
+      <h1
+        class="text-[10px] md:text-1xl font-semibold text-center text-gray-500 w-fit mx-auto mt-2"
+      >
+        Discover the difference we make through the voices of those we,ve served
+      </h1>
+
+      <!-- card testimonals -->
+
+      <div class="relative w-full bg-white  md:px-30">
+
+  <!-- TOP LEFT DOT -->
+  <!-- <img src="./dots-top.png"
+       class="absolute top-0 left-0 w-24 opacity-60 pointer-events-none" /> -->
+
+  <!-- TOP TESTIMONIALS -->
+  <div class="grid md:grid-cols-2 gap-8 mt-10 place-items-center">
+
+    <!-- Card 1 -->
+    <div class="max-w-[500px] w-full rounded-2xl p-6 shadow-md"
+         style="background: linear-gradient(135deg, #ffffff 0%, #d2ecfc 100%);">
+      <div class="flex items-center gap-3 mb-3">
+
+        <img src="./images/card-1.png" class="w-12 h-12 rounded-2xl object-cover" />
+        <p class="text-[#4b4b4b] text-[15px] leading-[22px]">
+          “After my knee surgery, the convenience of online consultations made my recovery smoother than I could have imagined.”
+        </p>
+      </div>
+      <p class="font-semibold text-[#333] ml-16">- Linda A.</p>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="max-w-[500px] w-full rounded-2xl p-6 shadow-md"
+         style="background: linear-gradient(135deg, #ffffff 0%, #d2ecfc 100%);">
+      <div class="flex items-center gap-3 mb-3">
+        <img src="./images/card-2.png" class="w-12 h-12 rounded-2xl object-cover" />
+        <p class="text-[#4b4b4b] text-[15px] leading-[22px]">
+          “Managing chronic conditions like diabetes requires a lot of vigilance, but the medicine refill system has simplified my life.”
+
+        </p>
+      </div>
+      <p class="font-semibold text-[#333] ml-16">- Henry B.</p>
+    </div>
+
+  </div>
+
+  <!-- STATS SECTION -->
+   <div class="grid grid-cols-2 md:grid-cols-4  text-center my-10"> 
+    <div>
+      <h2 class="text-3xl lg:text-4xl font-bold text-[#0095DE]">10,000+</h2>
+      <p class="text-gray-500 text-sm">Successful Consultations</p>
+    </div>
+    <div>
+      <h2 class="text-3xl lg:text-4xl font-bold text-[#0095DE]">2,500+</h2>
+      <p class="text-gray-500 text-sm">Healthcare Professionals</p>
+    </div>
+    <div>
+      <h2 class="text-3xl lg:text-4xl font-bold text-[#0095DE]">98%</h2>
+      <p class="text-gray-500 text-sm">Patient Satisfaction</p>
+    </div>
+    <div>
+      <h2 class="text-3xl lg:text-4xl font-bold text-[#0095DE]">200+</h2>
+      <p class="text-gray-500 text-sm">Top Specialists</p>
+    </div>
+  </div>
+
+  <!-- BOTTOM TESTIMONIALS -->
+  <div class="flex grid md:grid-cols-2 gap-8 place-items-center">
+
+    <!-- Card 3 -->
+    <div class="max-w-[500px] w-full rounded-2xl p-6 shadow-md"
+         style="background: linear-gradient(135deg, #ffffff 0%, #d2ecfc 100%);">
+      <div class="flex items-center gap-3 mb-3">
+        <img src="./images/card-3.png" class="w-12 h-12 rounded-2xl object-cover" />
+        <p class="text-[#4b4b4b] text-[15px] leading-[22px]">
+         “The prescription refill system is a game-changer for managing my diabetes. It’s really efficient and completely hassle-free.”
+        </p>
+      </div>
+      <p class="font-semibold text-[#333] ml-16">- Joshua T.</p>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="max-w-[500px] w-full rounded-2xl p-6 shadow-md"
+         style="background: linear-gradient(135deg, #ffffff 0%, #d2ecfc 100%);">
+      <div class="flex items-center gap-3 mb-3">
+        <img src="./images/card-4.png" class="w-12 h-12 rounded-2xl object-cover" />
+        <p class="text-[#4b4b4b] text-[15px] leading-[22px]">
+          “Finding a doctor who really understands all of my health needs has never been easier. This platform has changed my life.”
+        </p>
+      </div>
+      <p class="font-semibold text-[#333] ml-16">- Samantha K.</p>
+    </div>
+
+  </div>
+
+  <!-- BOTTOM RIGHT DOT -->
+  <!-- <img src="./dots-bottom.png"
+       class="absolute bottom-0 right-0 w-24 opacity-60 pointer-events-none" /> -->
+
+</div>
+
+    </section>
+  </body>
+</html>
+
+<!-- transform transition-all duration-1000 ease-out hover:scale-105 hover:-translate-y-2 ----------- hover:from-[#8ddaff] hover:to-[#0078b3]-->
